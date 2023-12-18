@@ -7,5 +7,5 @@ app.use(express.json());
 // mongoose.connect()
 
 app.listen(5050, () => {
-    console.log("Server running...");
+    console.log("Backend server running...");
 });
