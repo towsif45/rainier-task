@@ -31,11 +31,11 @@ router.post("/login", async (req, res) => {
                 user.password
             );
             if (!password_check) {
-                res.status(420).json("Wrong Password!");
+                res.status(421).json("Wrong Password!");
             } else {
                 const { password, ...others } = user._doc;
                 const accessToken = jwt.sign(
-                    { id: user._id },
+                    { id: user._id, isAdmin: user.isAdmin },
                     "tellmewheredowedrawtheline?",
                     { expiresIn: "1h" }
                 );

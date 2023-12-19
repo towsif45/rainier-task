@@ -13,4 +13,14 @@ router.post("/create", verifyTokenAndAdmin, async (req, res) => {
     }
 });
 
+// GET A LIST OF ALL COURSES
+router.get("/allcourses", async (req, res) => {
+    try {
+        const courses = await Course.find();
+        res.status(200).json(courses);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;

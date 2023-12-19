@@ -19,7 +19,7 @@ const verifyToken = (req, res, next) => {
 
 const verifyTokenAndAdmin = (req, res, next) => {
     verifyToken(req, res, () => {
-        // console.log(req.params.id);
+        console.log(req.params.id);
         console.log(req.user);
         if (req.user.isAdmin) {
             next();
