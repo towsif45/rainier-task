@@ -3,6 +3,8 @@ const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
+const JWT_KEY = "tellmewheredowedrawtheline?";
+
 // REGISTER
 router.post("/register", async (req, res) => {
     const hashed_password = await bcrypt.hash(req.body.password, 10);
@@ -36,8 +38,8 @@ router.post("/login", async (req, res) => {
                 const { password, ...others } = user._doc;
                 const accessToken = jwt.sign(
                     { id: user._id, isAdmin: user.isAdmin },
-                    "tellmewheredowedrawtheline?",
-                    { expiresIn: "1h" }
+                    JWT_KEY,
+                    { expiresIn: "12h" }
                 );
                 console.log(accessToken);
                 res.status(200).json({ others, accessToken });

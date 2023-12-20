@@ -24,7 +24,7 @@ router.get("/find/all", async (req, res) => {
 });
 
 // GET A SPECIFIC COURSE BY ID
-router.get("/find/:id", verifyTokenAndAdmin, async (req, res) => {
+router.get("/find/:id", async (req, res) => {
     try {
         const course = await Course.findById(req.params.id);
         res.status(200).json(course);
