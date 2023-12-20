@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken");
 
 const JWT_KEY = "tellmewheredowedrawtheline?";
 
+// Verify JWT token
 const verifyToken = (req, res, next) => {
     const authHeader = req.headers.token;
 

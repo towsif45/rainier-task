@@ -4,6 +4,7 @@
 - To globally install yarn, run `npm install --global yarn`. For Linux/Mac, try adding `sudo` before the command if it doesn't work.
 - After cloning the project, change the working directory to `api` and run `yarn` in the terminal to install the necessary dependencies.
 - To start the backend server, run `nodemon index.js` in the terminal.
+- Use the generated token from login response as a header to perform admin tasks. The key of the header should be 'token'.
 
 ## API Endpoints
 
