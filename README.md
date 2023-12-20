@@ -2,8 +2,8 @@
 
 - Node.js version: 20.9.0
 - To globally install yarn, run `npm install --global yarn`. For Linux/Mac, try adding `sudo` before the command if it doesn't work.
-- After cloning the project, change the working directory to `api` and run `yarn` in the terminal to install necessary dependencies.
-- To start the backend server, run `nodemon index.js`.
+- After cloning the project, change the working directory to `api` and run `yarn` in the terminal to install the necessary dependencies.
+- To start the backend server, run `nodemon index.js` in the terminal.
 
 ## API Endpoints
 
